@@ -106,19 +106,19 @@ const CASE_STUDIES = [
 
 const ART_WORKS = [
   {
-    src: '/florence.jpeg',
+    src: '/florence.JPG',
     alt: 'Florence Pugh — graphite portrait, looking over shoulder',
     title: 'Florence Pugh',
     medium: 'Graphite on Paper',
   },
   {
-    src: '/george.png',
+    src: '/george.PNG',
     alt: 'George Russell — graphite portrait, gaze upward',
     title: 'George Russell',
     medium: 'Graphite on Paper',
   },
   {
-    src: '/selena.png',
+    src: '/selena.PNG',
     alt: 'Selena Gomez — charcoal portrait with hoop earrings',
     title: 'Selena Gomez',
     medium: 'Charcoal on Paper',
@@ -438,7 +438,7 @@ export default function App() {
         style={{ position: 'relative', width: '100%', height: '100vh', minHeight: 600, overflow: 'hidden', background: '#02110c' }}
       >
         <img
-          src="/image.png"
+          src="/image.PNG"
           alt="Carol Fredina — pencil portrait artwork"
           style={{
             position: 'absolute', inset: 0, width: '100%', height: '100%',
@@ -774,7 +774,7 @@ export default function App() {
             }}
           >
             <img
-              src="/image.png"
+              src="/image.PNG"
               alt="Carol Fredina — original graphite portrait, featured work"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }}
             />
