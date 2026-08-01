@@ -1,8 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import heroPng from '@/imports/image.png'
-import art1 from '@/imports/florence.jpeg'
-import art2 from '@/imports/george.png'
-import art3 from '@/imports/selena.png'
 
 // ── Theme definitions ──────────────────────────────────────────────────────
 type ThemeKey = 'light' | 'dark' | 'forest' | 'dusk'
@@ -110,19 +106,19 @@ const CASE_STUDIES = [
 
 const ART_WORKS = [
   {
-    src: art1,
+    src: '/florence.jpeg',
     alt: 'Florence Pugh — graphite portrait, looking over shoulder',
     title: 'Florence Pugh',
     medium: 'Graphite on Paper',
   },
   {
-    src: art2,
+    src: '/george.png',
     alt: 'George Russell — graphite portrait, gaze upward',
     title: 'George Russell',
     medium: 'Graphite on Paper',
   },
   {
-    src: art3,
+    src: '/selena.png',
     alt: 'Selena Gomez — charcoal portrait with hoop earrings',
     title: 'Selena Gomez',
     medium: 'Charcoal on Paper',
@@ -441,8 +437,8 @@ export default function App() {
         ref={heroRef}
         style={{ position: 'relative', width: '100%', height: '100vh', minHeight: 600, overflow: 'hidden', background: '#02110c' }}
       >
-        <im
-          src={heroPng}
+        <img
+          src="/image.png"
           alt="Carol Fredina — pencil portrait artwork"
           style={{
             position: 'absolute', inset: 0, width: '100%', height: '100%',
@@ -778,7 +774,7 @@ export default function App() {
             }}
           >
             <img
-              src={heroPng}
+              src="/image.png"
               alt="Carol Fredina — original graphite portrait, featured work"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }}
             />
