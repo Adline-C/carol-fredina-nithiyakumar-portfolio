@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import heroPng from '@/imports/image.png'
-import art1 from '@/imports/WhatsApp_Image_2026-08-01_at_3.40.17_PM.jpeg'
-import art2 from '@/imports/_83BF83AD-3350-486C-844C-01E20869BB1C_.png'
-import art3 from '@/imports/_877197DF-3904-46B6-8725-2F53435C8BC3_.png'
+import art1 from '@/imports/florence.png'
+import art2 from '@/imports/george.png'
+import art3 from '@/imports/selena.png'
 
 // ── Theme definitions ──────────────────────────────────────────────────────
 type ThemeKey = 'light' | 'dark' | 'forest' | 'dusk'
