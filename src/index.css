@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Barlow:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --color-racing-green: #02110c;
+  --color-slate-blue: #C9D7E1;
+  --color-caramel: #c8813a;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: #ffffff;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar by default, show on scroll */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #000;
+  opacity: 0;
+}
+
+.hairline {
+  height: 1px;
+  background: #000;
+  width: 100%;
+}
+
+.hairline-white {
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  width: 100%;
+}
+
+.hairline-slate {
+  height: 1px;
+  background: #C9D7E1;
+  width: 100%;
+}
+
+.underline-link {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  text-decoration: none;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.underline-link:hover {
+  opacity: 0.5;
+}
+
+.nav-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.display-xl {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 0.92;
+}
+
+.display-lg {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.0;
+}
+
+.display-md {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+}
+
+.label-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.body-text {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+.section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #c8813a;
+}
+
+/* Technical grid line decoration */
+.tech-grid-bg {
+  background-image:
+    linear-gradient(rgba(201,215,225,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,215,225,0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.green-section {
+  background-color: #02110c;
+  color: #ffffff;
+}
+
+.impact-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.tag-item {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid #C9D7E1;
+  padding: 9px 18px;
+  color: #444;
+  transition: all 0.2s ease;
+}
+
+.tag-item:hover {
+  border-color: #02110c;
+  background: #02110c;
+  color: #fff;
+}
+
+.experience-role {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.experience-company {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c8813a;
+}
+
+.experience-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+/* Smooth hover for hero cta */
+.hero-cta {
+  color: rgba(255,255,255,0.9);
+  transition: color 0.2s;
+}
+.hero-cta:hover {
+  color: #C9D7E1;
+}
+
+/* Nav transition */
+.nav-transparent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 28px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s ease;
+}
+
+.nav-transparent.scrolled {
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e8e8e8;
+  padding: 18px 40px;
+}
+
+
+/* ── ANIMATIONS ── */
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(48px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-48px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceLine {
+  0%, 100% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(6px); opacity: 0.7; }
+}
+
+.hero-fade-in {
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.scroll-bounce > div {
+  animation: bounceLine 2.2s ease-in-out infinite;
+}
+
+/* Scroll-triggered reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children */
+.reveal-stagger > *:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger > *:nth-child(2) { transition-delay: 0.1s; }
+.reveal-stagger > *:nth-child(3) { transition-delay: 0.2s; }
+.reveal-stagger > *:nth-child(4) { transition-delay: 0.3s; }
+
+/* Menu nav item hover */
+.menu-nav-item {
+  position: relative;
+  overflow: hidden;
+}
+.menu-nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #C9D7E1;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.menu-nav-item:hover::after {
+  width: 100%;
+}
+.menu-nav-item:hover {
+  color: #C9D7E1 !important;
+}
+
+/* Section label pop on scroll */
+.section-label {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Impact stat hover */
+.impact-row {
+  transition: background 0.25s ease;
+  border-radius: 2px;
+}
+.impact-row:hover {
+  background: rgba(255,255,255,0.03);
+}
+.impact-row:hover .impact-number {
+  color: #C9D7E1;
+  transition: color 0.25s ease;
+}
+
+/* Experience block hover */
+.experience-block {
+  transition: transform 0.3s ease;
+}
+.experience-block:hover {
+  transform: translateX(4px);
+}
+
+/* Tag hover is already defined above, but add smooth scale */
+.tag-item {
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.tag-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Image hover parallax feel */
+.portfolio-img {
+  overflow: hidden;
+}
+.portfolio-img img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+.portfolio-img:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.85) contrast(1.1);
+}
+
+/* Art gallery caption — shown on parent hover */
+.portfolio-img .art-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+  padding: 32px 24px 22px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.portfolio-img:hover .art-caption {
+  opacity: 1;
+}
+
+/* F1 lap time style data strip */
+.data-strip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .nav-transparent {
+    padding: 20px 24px;
+  }
+  .nav-transparent.scrolled {
+    padding: 14px 24px;
+  }
+
+  /* Collapse 2-col grids to single col on mobile */
+  .mobile-stack {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .impact-number {
+    font-size: 2.8rem;
+  }
+}

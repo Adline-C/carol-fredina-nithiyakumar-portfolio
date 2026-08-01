@@ -1,0 +1,10 @@
+{
+  "description": "Create stunning editorial portfolio landing pages that blend luxury fashion and Formula 1 aesthetics, showcasing professional work with elegance and style.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
