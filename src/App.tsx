@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import heroPng from '@/imports/image.png'
-import art1 from '@/imports/florence.png'
+import art1 from '@/imports/florence.jpeg'
 import art2 from '@/imports/george.png'
 import art3 from '@/imports/selena.png'
 
