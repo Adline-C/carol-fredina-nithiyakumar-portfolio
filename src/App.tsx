@@ -441,7 +441,7 @@ export default function App() {
         ref={heroRef}
         style={{ position: 'relative', width: '100%', height: '100vh', minHeight: 600, overflow: 'hidden', background: '#02110c' }}
       >
-        <img
+        <im
           src={heroPng}
           alt="Carol Fredina — pencil portrait artwork"
           style={{
